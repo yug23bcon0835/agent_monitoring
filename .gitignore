@@ -1,0 +1,31 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.python-version
+
+# Virtual environments / tooling
+.venv/
+.env
+.env.local
+venv/
+
+dist/
+build/
+*.egg-info/
+
+# Test / coverage outputs
+.coverage
+htmlcov/
+.pytest_cache/
+
+# IDE Files
+.vscode/
+.idea/
+.DS_Store
+
+# Project runtime exports
+agent_monitoring_platform/real_agent_output/*.json
+agent_monitoring_platform/real_agent_output/sessions/

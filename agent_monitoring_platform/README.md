@@ -12,6 +12,7 @@ The Agent Monitoring Platform provides a production-ready solution for:
 - **Dashboard & Analytics**: Visual monitoring with Streamlit and advanced analytics
 - **Agent Registry**: Track agent versions, capabilities, and dependencies
 - **Alert System**: Real-time alerts for anomalies and performance issues
+- **Session Management**: Persist cross-session runs, lineage, and Groq agent integrations
 
 ## 📁 Project Structure
 
@@ -179,6 +180,13 @@ Production monitoring alerts:
 - Anomaly detection
 - Multiple notification channels
 - Alert history and acknowledgment
+
+### 6. Session Management & Cross-Session Runs
+
+- Persist monitoring sessions with detailed run lineage and metadata
+- Resume or fork sessions to compare agent behavior across upgrades
+- Cross-session analytics powering the Streamlit dashboard
+- Native bridge for Groq/real agents via `SessionManager` + LangChain callback
 
 ## 📊 Supported Metrics
 

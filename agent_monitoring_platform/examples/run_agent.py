@@ -7,9 +7,11 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from langchain_groq import ChatGroq
 from langchain_classic.agents import load_tools
 from langchain_classic.agents import AgentExecutor, create_react_agent
-from telemetry.collector import TelemetryCollector
 from langchain_core.prompts import PromptTemplate
+
+from telemetry.collector import TelemetryCollector
 from telemetry.exporters import JSONExporter
+from sessions import SessionManager
 from examples.langchain_bridge import AgentMonitoringCallback
 
 REACT_PROMPT = """Answer the following questions as best you can. You have access to the following tools:
@@ -32,66 +34,92 @@ Begin!
 Question: {input}
 Thought:{agent_scratchpad}"""
 
+
+def _resolve_session(session_manager: SessionManager, agent_id: str):
+    resume_last = os.getenv("RESUME_LAST_SESSION", "false").lower() == "true"
+    if resume_last:
+        existing = session_manager.list_sessions(agent_id=agent_id)
+        if existing:
+            print("🔁 Resuming previous session for cross-run comparison...")
+            parent = existing[0]
+            return session_manager.fork_session(
+                parent_session_id=parent.session_id,
+                name=f"{parent.name} (cross-session)",
+                tags={**parent.tags, "resumed": True},
+            )
+
+    return session_manager.start_session(
+        agent_id=agent_id,
+        name="Real Agent Runbook",
+        description="Demo monitoring session for Groq-powered agent",
+        tags={"source": "examples.run_agent"},
+    )
+
+
 def main():
-    # 1. Setup Your Platform
+    session_manager = SessionManager()
+    agent_identifier = "MathWizard_GPT4"
+    session = _resolve_session(session_manager, agent_identifier)
+
+    # 1. Setup Telemetry and Exporters
     print("🚀 Starting Monitoring Platform...")
     collector = TelemetryCollector()
     collector.add_exporter(JSONExporter("./real_agent_output"))
     collector.start()
 
-    # 2. Create the Bridge
-    # This connects the LangChain agent to your collector
-    monitoring_callback = AgentMonitoringCallback(collector, agent_name="MathWizard_GPT4")
+    # 2. Create the Bridge with session context
+    monitoring_callback = AgentMonitoringCallback(
+        collector,
+        agent_name=agent_identifier,
+        session_manager=session_manager,
+        session_id=session.session_id,
+    )
 
-    # 3. Setup Real LangChain Agent
-    # (Requires OPENAI_API_KEY environment variable)
+    # 3. Setup Real LangChain Agent (requires GROQ_API_KEY)
     if not os.getenv("GROQ_API_KEY"):
         print("❌ Please set GROQ_API_KEY environment variable to run this test.")
         collector.stop()
+        session_manager.close_session(session.session_id, status="failed")
         return
 
     print("🤖 Initializing LangChain Agent...")
     llm = ChatGroq(temperature=0, model="llama-3.1-8b-instant")
     tools = load_tools(["llm-math"], llm=llm)
-
     prompt = PromptTemplate.from_template(REACT_PROMPT)
-
     agent = create_react_agent(llm, tools, prompt)
-    
-    agent = AgentExecutor(
-        agent=agent, 
-        tools=tools, 
-        verbose=True,
-        handle_parsing_errors=True
-    )
+    agent = AgentExecutor(agent=agent, tools=tools, verbose=True, handle_parsing_errors=True)
 
-    # 4. Run the Agent with the Callback
     query = "What is 25 raised to the power of 0.43?"
     print(f"\n❓ Query: {query}\n")
-    
-    try:
-        # Pass the callback here! This is the magic step.
-        result = agent.invoke(
-            {"input": query}, 
-            config={"callbacks": [monitoring_callback]}
-        )
-        print(f"\n💡 Answer: {result['output']}")
-    except Exception as e:
-        print(f"Agent failed: {e}")
-        import traceback
-        traceback.print_exc()
 
-    # 5. Cleanup and Export
-    print("\n💾 Exporting Telemetry Data...")
-    collector.stop() # Stops background threads
-    collector.export_all() # Force final export
-    
-    # Verify metrics
-    metric = collector.get_metric("agent_execution_duration")
-    if metric and metric.values:
-        print(f"✅ Success! Captured {len(metric.values)} execution record.")
-    else:
-        print("⚠️ Warning: No execution metrics captured.")
+    run_status = "completed"
+    try:
+        result = agent.invoke({"input": query}, config={"callbacks": [monitoring_callback]})
+        print(f"\n💡 Answer: {result['output']}")
+    except Exception as exc:
+        run_status = "failed"
+        print(f"Agent failed: {exc}")
+        import traceback
+
+        traceback.print_exc()
+    finally:
+        print("\n💾 Exporting Telemetry Data...")
+        collector.stop()
+        collector.export_all()
+        session_manager.close_session(session.session_id, status=run_status)
+        summary = session_manager.get_cross_session_summary(agent_id=agent_identifier)
+        print(
+            "📊 Cross-session summary -> sessions: {total_sessions}, runs: {total_runs}, success rate: {success_rate:.1f}%".format(
+                **summary
+            )
+        )
+
+        metric = collector.get_metric("agent_execution_duration")
+        if metric and metric.values:
+            print(f"✅ Success! Captured {len(metric.values)} execution record.")
+        else:
+            print("⚠️ Warning: No execution metrics captured.")
+
 
 if __name__ == "__main__":
     main()
