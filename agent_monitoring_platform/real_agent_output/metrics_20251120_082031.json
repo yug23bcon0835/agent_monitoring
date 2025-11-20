@@ -1,0 +1,253 @@
+{
+  "timestamp": "2025-11-20T08:20:31.238358",
+  "metrics": {
+    "agent_execution_duration": {
+      "definition": {
+        "name": "agent_execution_duration",
+        "type": "histogram",
+        "description": "Default histogram: agent_execution_duration",
+        "unit": "ms"
+      },
+      "values": [
+        {
+          "value": 217,
+          "timestamp": "2025-11-20T08:20:27.906961",
+          "tags": {}
+        },
+        {
+          "value": 423,
+          "timestamp": "2025-11-20T08:20:28.007188",
+          "tags": {}
+        },
+        {
+          "value": 196,
+          "timestamp": "2025-11-20T08:20:28.107638",
+          "tags": {}
+        },
+        {
+          "value": 272,
+          "timestamp": "2025-11-20T08:20:28.208104",
+          "tags": {}
+        },
+        {
+          "value": 143,
+          "timestamp": "2025-11-20T08:20:28.308752",
+          "tags": {}
+        },
+        {
+          "value": 249,
+          "timestamp": "2025-11-20T08:20:29.414444",
+          "tags": {}
+        },
+        {
+          "value": 66,
+          "timestamp": "2025-11-20T08:20:29.515576",
+          "tags": {}
+        },
+        {
+          "value": 208,
+          "timestamp": "2025-11-20T08:20:29.615894",
+          "tags": {}
+        },
+        {
+          "value": 279,
+          "timestamp": "2025-11-20T08:20:29.716389",
+          "tags": {}
+        },
+        {
+          "value": 78,
+          "timestamp": "2025-11-20T08:20:29.816878",
+          "tags": {}
+        },
+        {
+          "value": 103,
+          "timestamp": "2025-11-20T08:20:29.917407",
+          "tags": {}
+        },
+        {
+          "value": 199,
+          "timestamp": "2025-11-20T08:20:30.017916",
+          "tags": {}
+        },
+        {
+          "value": 74,
+          "timestamp": "2025-11-20T08:20:30.118659",
+          "tags": {}
+        },
+        {
+          "value": 670,
+          "timestamp": "2025-11-20T08:20:30.228610",
+          "tags": {}
+        },
+        {
+          "value": 542,
+          "timestamp": "2025-11-20T08:20:30.329696",
+          "tags": {}
+        },
+        {
+          "value": 506,
+          "timestamp": "2025-11-20T08:20:30.433567",
+          "tags": {}
+        },
+        {
+          "value": 590,
+          "timestamp": "2025-11-20T08:20:30.534029",
+          "tags": {}
+        },
+        {
+          "value": 425,
+          "timestamp": "2025-11-20T08:20:30.634718",
+          "tags": {}
+        },
+        {
+          "value": 687,
+          "timestamp": "2025-11-20T08:20:30.735358",
+          "tags": {}
+        },
+        {
+          "value": 580,
+          "timestamp": "2025-11-20T08:20:30.835967",
+          "tags": {}
+        },
+        {
+          "value": 685,
+          "timestamp": "2025-11-20T08:20:30.936493",
+          "tags": {}
+        },
+        {
+          "value": 538,
+          "timestamp": "2025-11-20T08:20:31.037033",
+          "tags": {}
+        },
+        {
+          "value": 417,
+          "timestamp": "2025-11-20T08:20:31.137774",
+          "tags": {}
+        }
+      ],
+      "statistics": {
+        "count": 23,
+        "sum": 8147,
+        "mean": 354.2173913043478,
+        "min": 66,
+        "max": 687,
+        "median": 279,
+        "p50": 279,
+        "p90": 670,
+        "p95": 685,
+        "p99": 687
+      }
+    },
+    "agent_success_rate": {
+      "definition": {
+        "name": "agent_success_rate",
+        "type": "counter",
+        "description": "Default counter: agent_success_rate",
+        "unit": null
+      },
+      "values": [
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:27.906961",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:28.007188",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:28.107638",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:28.208104",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:28.308752",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:29.414444",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:29.515576",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:29.615894",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:29.716389",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:29.816878",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:29.917407",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:30.017916",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:30.118659",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:30.228610",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:30.433567",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:30.534029",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:30.735358",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:30.835967",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:31.037033",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:31.137774",
+          "tags": {}
+        }
+      ],
+      "total": 20
+    }
+  }
+}

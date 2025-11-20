@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-11-18T15:41:54.491956",
+  "metrics": {
+    "llm_latency_ms": {
+      "definition": {
+        "name": "llm_latency_ms",
+        "type": "histogram",
+        "description": "Default histogram: llm_latency_ms",
+        "unit": "ms"
+      },
+      "values": [
+        {
+          "value": 328.28712463378906,
+          "timestamp": "2025-11-18T15:41:45.519376",
+          "tags": {
+            "model": "llama-3.1-8b-instant"
+          }
+        }
+      ],
+      "statistics": {
+        "count": 1,
+        "sum": 328.28712463378906,
+        "mean": 328.28712463378906,
+        "min": 328.28712463378906,
+        "max": 328.28712463378906,
+        "median": 328.28712463378906,
+        "p50": 328.28712463378906,
+        "p90": 328.28712463378906,
+        "p95": 328.28712463378906,
+        "p99": 328.28712463378906
+      }
+    },
+    "agent_execution_duration": {
+      "definition": {
+        "name": "agent_execution_duration",
+        "type": "histogram",
+        "description": "Default histogram: agent_execution_duration",
+        "unit": "ms"
+      },
+      "values": [
+        {
+          "value": 802.6552200317383,
+          "timestamp": "2025-11-18T15:41:45.519376",
+          "tags": {}
+        }
+      ],
+      "statistics": {
+        "count": 1,
+        "sum": 802.6552200317383,
+        "mean": 802.6552200317383,
+        "min": 802.6552200317383,
+        "max": 802.6552200317383,
+        "median": 802.6552200317383,
+        "p50": 802.6552200317383,
+        "p90": 802.6552200317383,
+        "p95": 802.6552200317383,
+        "p99": 802.6552200317383
+      }
+    },
+    "agent_success_rate": {
+      "definition": {
+        "name": "agent_success_rate",
+        "type": "counter",
+        "description": "Default counter: agent_success_rate",
+        "unit": null
+      },
+      "values": [],
+      "total": 0
+    }
+  }
+}

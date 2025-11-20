@@ -1,0 +1,168 @@
+{
+  "timestamp": "2025-11-20T08:20:30.219294",
+  "metrics": {
+    "agent_execution_duration": {
+      "definition": {
+        "name": "agent_execution_duration",
+        "type": "histogram",
+        "description": "Default histogram: agent_execution_duration",
+        "unit": "ms"
+      },
+      "values": [
+        {
+          "value": 217,
+          "timestamp": "2025-11-20T08:20:27.906961",
+          "tags": {}
+        },
+        {
+          "value": 423,
+          "timestamp": "2025-11-20T08:20:28.007188",
+          "tags": {}
+        },
+        {
+          "value": 196,
+          "timestamp": "2025-11-20T08:20:28.107638",
+          "tags": {}
+        },
+        {
+          "value": 272,
+          "timestamp": "2025-11-20T08:20:28.208104",
+          "tags": {}
+        },
+        {
+          "value": 143,
+          "timestamp": "2025-11-20T08:20:28.308752",
+          "tags": {}
+        },
+        {
+          "value": 249,
+          "timestamp": "2025-11-20T08:20:29.414444",
+          "tags": {}
+        },
+        {
+          "value": 66,
+          "timestamp": "2025-11-20T08:20:29.515576",
+          "tags": {}
+        },
+        {
+          "value": 208,
+          "timestamp": "2025-11-20T08:20:29.615894",
+          "tags": {}
+        },
+        {
+          "value": 279,
+          "timestamp": "2025-11-20T08:20:29.716389",
+          "tags": {}
+        },
+        {
+          "value": 78,
+          "timestamp": "2025-11-20T08:20:29.816878",
+          "tags": {}
+        },
+        {
+          "value": 103,
+          "timestamp": "2025-11-20T08:20:29.917407",
+          "tags": {}
+        },
+        {
+          "value": 199,
+          "timestamp": "2025-11-20T08:20:30.017916",
+          "tags": {}
+        },
+        {
+          "value": 74,
+          "timestamp": "2025-11-20T08:20:30.118659",
+          "tags": {}
+        }
+      ],
+      "statistics": {
+        "count": 13,
+        "sum": 2507,
+        "mean": 192.84615384615384,
+        "min": 66,
+        "max": 423,
+        "median": 199,
+        "p50": 199,
+        "p90": 279,
+        "p95": 423,
+        "p99": 423
+      }
+    },
+    "agent_success_rate": {
+      "definition": {
+        "name": "agent_success_rate",
+        "type": "counter",
+        "description": "Default counter: agent_success_rate",
+        "unit": null
+      },
+      "values": [
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:27.906961",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:28.007188",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:28.107638",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:28.208104",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:28.308752",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:29.414444",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:29.515576",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:29.615894",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:29.716389",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:29.816878",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:29.917407",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:30.017916",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:30.118659",
+          "tags": {}
+        }
+      ],
+      "total": 13
+    }
+  }
+}

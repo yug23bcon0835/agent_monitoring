@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-11-18T15:41:54.492930",
+  "events": [
+    {
+      "event_id": "9924b968-ea61-4696-bf85-a73ec7f9bca9",
+      "event_type": "SPAN_ENDED",
+      "timestamp": "2025-11-18T15:41:45.519376",
+      "severity": "info",
+      "source": "llm:llama-3.1-8b-instant",
+      "message": "",
+      "data": {
+        "span_id": "df703f18-127b-49a4-bd7c-844c59ce5e9f",
+        "status": "OK",
+        "duration_ms": 0.0
+      },
+      "context": {}
+    },
+    {
+      "event_id": "efb3147c-2df8-491e-a5db-84a1dda3a787",
+      "event_type": "AGENT_START",
+      "timestamp": "2025-11-18T15:41:45.519376",
+      "severity": "info",
+      "source": "agent:MathWizard_GPT4",
+      "message": "Agent execution started",
+      "data": {
+        "trace_id": "7221c617-4590-4ed2-ae29-30437fc95916"
+      },
+      "context": {}
+    },
+    {
+      "event_id": "1594f657-8544-44ba-be9b-46a640e872e0",
+      "event_type": "SPAN_ENDED",
+      "timestamp": "2025-11-18T15:41:45.519376",
+      "severity": "info",
+      "source": "agent:MathWizard_GPT4",
+      "message": "",
+      "data": {
+        "span_id": "2978cae6-df4e-4b0d-86ae-c058554483f6",
+        "status": "ERROR",
+        "duration_ms": 0.0
+      },
+      "context": {}
+    }
+  ]
+}

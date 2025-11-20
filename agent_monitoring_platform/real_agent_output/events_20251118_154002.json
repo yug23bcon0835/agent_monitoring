@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-11-18T15:40:02.638009",
+  "events": [
+    {
+      "event_id": "e6038064-e640-47ec-9e11-ee9275651ba4",
+      "event_type": "AGENT_START",
+      "timestamp": "2025-11-18T15:39:53.068216",
+      "severity": "info",
+      "source": "agent:MathWizard_GPT4",
+      "message": "Agent execution started",
+      "data": {
+        "trace_id": "ef44e9ef-ba66-48e3-ac84-e612ef9e8e50"
+      },
+      "context": {}
+    },
+    {
+      "event_id": "33c9cda5-1a22-4752-97f9-9074e9b709e8",
+      "event_type": "SPAN_ENDED",
+      "timestamp": "2025-11-18T15:39:53.068216",
+      "severity": "info",
+      "source": "agent:MathWizard_GPT4",
+      "message": "",
+      "data": {
+        "span_id": "ccfce340-e82e-402e-a8c9-bef402b5544e",
+        "status": "ERROR",
+        "duration_ms": 0.0
+      },
+      "context": {}
+    }
+  ]
+}

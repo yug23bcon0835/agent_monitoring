@@ -1,0 +1,64 @@
+# Core Framework
+streamlit>=1.28.0
+python-dotenv>=1.0.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+scipy>=1.10.0
+
+# Database
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+sqlite3
+
+# Time Series & Analytics
+statsmodels>=0.14.0
+prophet>=1.1.0
+pyarrow>=12.0.0
+
+# Monitoring & Metrics
+prometheus-client>=0.17.0
+
+# LLM Integrations (Example integrations)
+langchain>=0.1.0
+langchain-core>=0.1.0
+langchain-groq>=0.1.0
+langchain-community>=0.0.10
+
+# Data Validation
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+
+# Utilities
+requests>=2.31.0
+python-dateutil>=2.8.0
+pytz>=2023.3
+uuid
+
+# Logging & Debugging
+python-json-logger>=2.0.0
+structlog>=23.1.0
+
+# Dashboard Components
+plotly>=5.17.0
+altair>=5.0.0
+seaborn>=0.13.0
+
+# API
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.0.0
+
+# Notification integrations
+slack-sdk>=3.23.0
+
+# Async support
+aiohttp>=3.9.0
+asyncio

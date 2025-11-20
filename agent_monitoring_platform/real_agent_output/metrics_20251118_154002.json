@@ -1,0 +1,42 @@
+{
+  "timestamp": "2025-11-18T15:40:02.637021",
+  "metrics": {
+    "agent_execution_duration": {
+      "definition": {
+        "name": "agent_execution_duration",
+        "type": "histogram",
+        "description": "Default histogram: agent_execution_duration",
+        "unit": "ms"
+      },
+      "values": [
+        {
+          "value": 231.40263557434082,
+          "timestamp": "2025-11-18T15:39:53.068216",
+          "tags": {}
+        }
+      ],
+      "statistics": {
+        "count": 1,
+        "sum": 231.40263557434082,
+        "mean": 231.40263557434082,
+        "min": 231.40263557434082,
+        "max": 231.40263557434082,
+        "median": 231.40263557434082,
+        "p50": 231.40263557434082,
+        "p90": 231.40263557434082,
+        "p95": 231.40263557434082,
+        "p99": 231.40263557434082
+      }
+    },
+    "agent_success_rate": {
+      "definition": {
+        "name": "agent_success_rate",
+        "type": "counter",
+        "description": "Default counter: agent_success_rate",
+        "unit": null
+      },
+      "values": [],
+      "total": 0
+    }
+  }
+}

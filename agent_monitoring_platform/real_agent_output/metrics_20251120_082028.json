@@ -1,0 +1,88 @@
+{
+  "timestamp": "2025-11-20T08:20:28.409557",
+  "metrics": {
+    "agent_execution_duration": {
+      "definition": {
+        "name": "agent_execution_duration",
+        "type": "histogram",
+        "description": "Default histogram: agent_execution_duration",
+        "unit": "ms"
+      },
+      "values": [
+        {
+          "value": 217,
+          "timestamp": "2025-11-20T08:20:27.906961",
+          "tags": {}
+        },
+        {
+          "value": 423,
+          "timestamp": "2025-11-20T08:20:28.007188",
+          "tags": {}
+        },
+        {
+          "value": 196,
+          "timestamp": "2025-11-20T08:20:28.107638",
+          "tags": {}
+        },
+        {
+          "value": 272,
+          "timestamp": "2025-11-20T08:20:28.208104",
+          "tags": {}
+        },
+        {
+          "value": 143,
+          "timestamp": "2025-11-20T08:20:28.308752",
+          "tags": {}
+        }
+      ],
+      "statistics": {
+        "count": 5,
+        "sum": 1251,
+        "mean": 250.2,
+        "min": 143,
+        "max": 423,
+        "median": 217,
+        "p50": 217,
+        "p90": 423,
+        "p95": 423,
+        "p99": 423
+      }
+    },
+    "agent_success_rate": {
+      "definition": {
+        "name": "agent_success_rate",
+        "type": "counter",
+        "description": "Default counter: agent_success_rate",
+        "unit": null
+      },
+      "values": [
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:27.906961",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:28.007188",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:28.107638",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:28.208104",
+          "tags": {}
+        },
+        {
+          "value": 1,
+          "timestamp": "2025-11-20T08:20:28.308752",
+          "tags": {}
+        }
+      ],
+      "total": 5
+    }
+  }
+}
